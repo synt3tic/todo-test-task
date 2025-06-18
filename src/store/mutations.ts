@@ -28,6 +28,10 @@ const mutations: MutationTree<State> = {
 
     SET_LOADING(state: State, loading: boolean) {
         state.loading = loading;
+    },
+
+    SET_CHANGE_LOADING(state: State, loading: boolean) {
+        state.changeLoading = loading;
     }
 };
 

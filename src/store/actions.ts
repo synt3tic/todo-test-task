@@ -16,35 +16,35 @@ export default {
     },
 
     async addTask({ commit }: ActionContext<State, State>, title: string) {
-        commit('SET_LOADING', true);
+        commit('SET_CHANGE_LOADING', true);
 
         try {
             const task = await addTask(title);
             commit('ADD_TASK', task);
         } finally {
-            commit('SET_LOADING', false);
+            commit('SET_CHANGE_LOADING', false);
         }
     },
 
     async deleteTask({ commit }: ActionContext<State, State>, id: number) {
-        commit('SET_LOADING', true);
+        commit('SET_CHANGE_LOADING', true);
 
         try {
             await deleteTask(id);
             commit('REMOVE_TASK', id);
         } finally {
-            commit('SET_LOADING', false);
+            commit('SET_CHANGE_LOADING', false);
         }
     },
 
     async toggleTask({ commit }: ActionContext<State, State>, id: number) {
-        commit('SET_LOADING', true);
+        commit('SET_CHANGE_LOADING', true);
 
         try {
             const task = await toggleTask(id);
             commit('UPDATE_TASK', task);
         } finally {
-            commit('SET_LOADING', false);
+            commit('SET_CHANGE_LOADING', false);
         }
     },
 

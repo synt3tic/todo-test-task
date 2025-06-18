@@ -1,5 +1,5 @@
 import type {ITaskFilterStatus} from "../types/task.ts";
-import {ref} from "vue";
+import {computed, ref} from "vue";
 import type {State} from "../types/store.ts";
 import type {Store} from "vuex";
 
@@ -23,10 +23,12 @@ export const useFilter = (store: Store<State>) => {
         selectedFilterValue.value = value as ITaskFilterStatus;
         store.dispatch('setFilter', value);
     }
+    const activeTasksCount = computed(() => store.getters.activeTasksCount);
 
     return {
         filterTabs,
         selectedFilterValue,
         onUpdateModelValue,
+        activeTasksCount,
     }
 }
