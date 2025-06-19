@@ -13,7 +13,7 @@ git clone https://github.com/synt3tic/todo-test-task.git
 2. Переходим в репозиторий и устанавливаем зависимости
 
 ```
-cd touch-typing-sim-spa && npm i
+cd todo-test-task && npm i
 ```
 
 3. Запускаем в режиме разработки
