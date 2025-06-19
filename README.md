@@ -7,7 +7,7 @@
 1. Клонируем репозиторий
 
 ```
-git clone https://github.com/synt3tic/touch-typing-sim-spa.git
+git clone https://github.com/synt3tic/todo-test-task.git
 ```
 
 2. Переходим в репозиторий и устанавливаем зависимости
